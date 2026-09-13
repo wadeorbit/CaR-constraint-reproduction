@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://openreview.net/forum?id=raDFGuQxvD"><img alt="ICLR" src="https://img.shields.io/static/v1?label=ICLR'26&message=Rio%20de%20Janeiro&color=purple&style=flat-square"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://openreview.net/pdf?id=raDFGuQxvD"><img alt="Poster" src="https://img.shields.io/static/v1?label=ICLR&message=Poster&color=blue&style=flat-square"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://arxiv.org/pdf/2602.16012"><img alt="Poster" src="https://img.shields.io/static/v1?label=ICLR&message=Poster&color=blue&style=flat-square"></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/jieyibi/CaR-constraint/blob/master/README.md"><img alt="License" src="https://img.shields.io/static/v1?label=License&message=MIT&color=rose&style=flat-square"></a>
 </p>
 
