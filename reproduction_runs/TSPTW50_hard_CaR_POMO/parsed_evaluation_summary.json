@@ -1,0 +1,102 @@
+{
+  "validation": "passed",
+  "benchmark_100": {
+    "phase": "benchmark_100",
+    "problem": "TSPTW",
+    "size": 50,
+    "hardness": "hard",
+    "checkpoint": "pretrained/TSPTW/CaR-POMO_50_hard/checkpoint.pt",
+    "seed": 2023,
+    "episodes": 100,
+    "batch_size": 32,
+    "augmentation": 8,
+    "sample_size": 1,
+    "test_pomo_size": 1,
+    "validation_improve_steps": 20,
+    "construction_no_aug_score": 25.8195,
+    "construction_aug_score": 25.8209,
+    "construction_aug_gap_pct": 0.5381,
+    "construction_solution_infeasible_pct": 18.0,
+    "construction_instance_infeasible_pct": 8.0,
+    "improvement_no_aug_score": 25.768,
+    "improvement_aug_score": 25.7621,
+    "improvement_aug_gap_pct": 0.0292,
+    "improvement_solution_infeasible_pct": 0.125,
+    "improvement_instance_infeasible_pct": 0.0,
+    "evaluation_seconds": 6.96,
+    "wall_seconds": 14.289,
+    "sampled_gpu_peak_mib": 331,
+    "exit_code": 0,
+    "evaluation_seconds_per_instance": 0.0696,
+    "wall_seconds_per_instance": 0.14289,
+    "gpu_baseline_mib": 12,
+    "sampled_gpu_peak_delta_mib": 319,
+    "gpu_sample_count": 25
+  },
+  "full_evaluation": {
+    "phase": "full_evaluation",
+    "problem": "TSPTW",
+    "size": 50,
+    "hardness": "hard",
+    "checkpoint": "pretrained/TSPTW/CaR-POMO_50_hard/checkpoint.pt",
+    "seed": 2023,
+    "episodes": 10000,
+    "batch_size": 32,
+    "augmentation": 8,
+    "sample_size": 1,
+    "test_pomo_size": 1,
+    "validation_improve_steps": 20,
+    "construction_no_aug_score": 25.7496,
+    "construction_aug_score": 25.71,
+    "construction_aug_gap_pct": 0.4741,
+    "construction_solution_infeasible_pct": 18.037,
+    "construction_instance_infeasible_pct": 9.69,
+    "improvement_no_aug_score": 25.6215,
+    "improvement_aug_score": 25.6142,
+    "improvement_aug_gap_pct": 0.0151,
+    "improvement_solution_infeasible_pct": 0.061,
+    "improvement_instance_infeasible_pct": 0.0,
+    "evaluation_seconds": 491.02,
+    "wall_seconds": 498.447,
+    "sampled_gpu_peak_mib": 331,
+    "exit_code": 0,
+    "evaluation_seconds_per_instance": 0.049102,
+    "wall_seconds_per_instance": 0.0498447,
+    "gpu_baseline_mib": 12,
+    "sampled_gpu_peak_delta_mib": 319,
+    "gpu_sample_count": 906
+  },
+  "paper_reference": {
+    "objective": 25.614,
+    "gap_pct": 0.014,
+    "instance_infeasible_pct": 0.01,
+    "evaluation_seconds": 51.0
+  },
+  "comparisons": {
+    "objective": {
+      "signed_difference": 0.00019999999999953388,
+      "absolute_difference": 0.00019999999999953388,
+      "relative_error_pct": 0.0007808229874269301
+    },
+    "gap_pct": {
+      "signed_difference": 0.0011000000000000003,
+      "absolute_difference": 0.0011000000000000003,
+      "relative_error_pct": 7.8571428571428585
+    },
+    "instance_infeasible_pct": {
+      "signed_difference": -0.01,
+      "absolute_difference": 0.01,
+      "relative_error_pct": 100.0
+    },
+    "evaluation_seconds": {
+      "signed_difference": 440.02,
+      "absolute_difference": 440.02,
+      "relative_error_pct": 862.7843137254902
+    }
+  },
+  "diagnostics": {
+    "local_solution_infeasible_pct": 0.061,
+    "solution_infeasible_comparable_to_paper_infsb": false,
+    "paper_infsb_aggregation": "instance-level best solution"
+  }
+}

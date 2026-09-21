@@ -1,0 +1,49 @@
+>> No occupation needed
+>> USE_CUDA: True, CUDA_DEVICE_NUM: 0
+>> Use unified encoder for Improvement and Construction!
+>> Use kopt decoder for Improvement!
+Number of Parameters: 1637856
+
+======================================================================
+                    TEST CONFIGURATION
+======================================================================
+  Problem:              TSPTW (Size: 50, Hardness: hard)
+  Checkpoint:           pretrained/TSPTW/CaR-POMO_50_hard/checkpoint.pt
+  Test Episodes:        2 | Batch Size: 2
+  Validation Improve Steps: 1
+  Soft Constrained:     True
+  Improvement Method:   kopt | N2S Decoder: False
+  POMO Start:           False | Test POMO Size: 1
+  Unified Encoder:       True | Unified Decoder: False
+  Eval Type:            softmax
+  Sample Size:          1
+======================================================================
+
+>> TEST dataset tsptw50_hard.pkl
+>> TEST 2 instances.
+>> validation eval type:  softmax
+Rank 0 >> val construction time:  0.9764635562896729
+! solution size:  torch.Size([16, 1, 50])
+Rank 0 >> val improvement time:  0.3394200801849365
+episode   2/  2, Elapsed[0.04m], Remain[0.00m]
+>> Only feasible solutions are under consideration!
+>> Load optimal solution from: ./data\TSPTW\lkh_tsptw50_hard.pkl
+Rank 0 >> Val Score on tsptw50_hard.pkl: [Construction] NO_AUG_Score: 26.5334, NO_AUG_Gap: 0.0691% --> AUG_Score: 26.5334, AUG_Gap: 0.0691%; Infeasible rate: 0.0% (solution-level), 0.0% (instance-level)
+Rank 0 >> Val Score on tsptw50_hard.pkl: [Improvement] NO_AUG_Score: 26.5151, NO_AUG_Gap: -0.0% --> AUG_Score: 26.5151, AUG_Gap: -0.0%; Infeasible rate: 0.0% (solution-level), 0.0% (instance-level)
+>> Evaluation finished within 2.17s
+
+ 
+*** Test Done on TSPTW *** 
+ 
+*** Construction *** 
+ NO-AUG SCORE: 26.5334, Gap: 0.0691 
+ AUGMENTATION SCORE: 26.5334, Gap: 0.0691 
+Solution level Infeasible rate: 0.000%
+Instance level Infeasible rate: 0.000%
+ 
+*** Improvement *** 
+ NO-AUG SCORE: 26.5151, Gap: -0.0000 
+ AUGMENTATION SCORE: 26.5151, Gap: -0.0000 
+NO AUG Solution level Infeasible rate: 0.000%
+Solution level Infeasible rate: 0.000%
+Instance level Infeasible rate: 0.000%
