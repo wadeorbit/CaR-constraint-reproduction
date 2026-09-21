@@ -77,3 +77,21 @@ Formal evaluation GPU: NVIDIA GeForce RTX 5060 Laptop GPU
 Formal evaluation sampled GPU baseline / peak: 12 MiB / 331 MiB
 Formal evaluation dataset SHA-256 after run: E8FB50D07692785D0E62A5F80BEBCD602C01051E81640718BAE783C395F33882
 Formal evaluation checkpoint SHA-256 after run: A85BE08B0CDC2C7EAE08DB838D4F295B7A3F493773293DB7163659F1AA5B4A80
+
+Refinement 5/10 capture: 2026-09-21 (Asia/Shanghai)
+Refinement phase Git HEAD: 4fe4495c3ed8b49da89247e15d704e3eaefeda3e
+Refinement phase Python: D:\Miniconda3\envs\car\python.exe
+Refinement phase CUDA device: 0, NVIDIA GeForce RTX 5060 Laptop GPU
+Refinement 5 sampled GPU baseline / peak: 55 MiB / 374 MiB
+Refinement 10 sampled GPU baseline / peak: 55 MiB / 428 MiB
+Dataset SHA-256 before/after both runs: E8FB50D07692785D0E62A5F80BEBCD602C01051E81640718BAE783C395F33882
+Checkpoint SHA-256 before/after both runs: A85BE08B0CDC2C7EAE08DB838D4F295B7A3F493773293DB7163659F1AA5B4A80
+20-step log SHA-256 before/after both runs: 752B1FBADBD3357C86AC392A8643414C1E942EC930773CFD4F584A88CA48B71B
+Core source integrity rows per run: 12/12 unchanged; combined snapshot rows including data/checkpoint/baseline log: 15/15 unchanged
+
+Path portability note:
+Local path record (本机记录): D:\Miniconda3\envs\car\python.exe
+The path above and the workspace/wheel paths are records from this workstation, not repository-wide path requirements.
+Portable 5/10-step reruns can pass -PythonExe '<path-to-python>' and either -RunLabel '<unique-label>' or -OutputDir '<new-directory>' to run_refinement_evaluation.ps1.
+The local default remains D:\Miniconda3\envs\car\python.exe for exact reproduction on this workstation.
+For a 20-step rerun, invoke run_smoke.ps1 with the formal parameters and a new -LogPrefix; never reuse full_evaluation or overwrite the committed baseline artifacts.

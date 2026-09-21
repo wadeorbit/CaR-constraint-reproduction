@@ -1,6 +1,6 @@
 # Executed commands and formal evaluation record
 
-All shell commands below ran from `D:\AI-Research\CaR-Reproduction` in PowerShell. Python was always invoked through `D:\Miniconda3\envs\car\python.exe`. The first `git status --short` launch hit a Windows `CreateProcessWithLogonW` error; the identical retry succeeded. No dependency installation, source edit, Git commit, or push command was run. Documentation and helper scripts were written with `apply_patch`; evaluation logs were written by the helper script.
+All experiment-execution commands below ran from `D:\AI-Research\CaR-Reproduction` in PowerShell. Python was always invoked through `D:\Miniconda3\envs\car\python.exe`. The first `git status --short` launch hit a Windows `CreateProcessWithLogonW` error; the identical retry succeeded. During the original experiment-execution phase, no dependency installation, source edit, Git commit, or push command was run. Local archival commits were created only after the evaluations and their artifacts had passed review. Documentation and helper scripts were written with `apply_patch`; evaluation logs were written by the helper script.
 
 ## Read-only audit commands executed
 
@@ -124,4 +124,62 @@ git diff --no-ext-diff --binary --output=reproduction_runs/TSPTW50_hard_CaR_POMO
 git status --short
 git diff -- train.py
 Get-PSDrive -Name D | Select-Object Name,Used,Free
+```
+
+## Five-step and ten-step refinement phase
+
+The 20-step command, effective printed configuration, target-directory absence, Git state, GPU availability, disk space, and pre-run hashes were checked read-only before launch. The dedicated runner was parsed by PowerShell before use and compares its argument list against `full_evaluation.log` before creating output.
+
+```powershell
+Get-Content -LiteralPath 'reproduction_runs\TSPTW50_hard_CaR_POMO\full_evaluation.log' -TotalCount 42
+Select-String -LiteralPath 'reproduction_runs\TSPTW50_hard_CaR_POMO\full_evaluation.log' -Pattern '^Arguments:','Test Episodes:','Validation Improve Steps:','POMO Start:','Eval Type:'
+Get-FileHash -Algorithm SHA256 -LiteralPath 'data\TSPTW\tsptw50_hard.pkl','pretrained\TSPTW\CaR-POMO_50_hard\checkpoint.pt','reproduction_runs\TSPTW50_hard_CaR_POMO\full_evaluation.log'
+git status --short
+git diff --name-status -- train.py test.py Trainer.py utils.py envs models data pretrained
+nvidia-smi --query-gpu=index,name,memory.total,memory.used,utilization.gpu,driver_version --format=csv,noheader
+$tokens=$null; $errors=$null; [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1'),[ref]$tokens,[ref]$errors) | Out-Null; $errors
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1' -ValidationImproveSteps 5
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1' -ValidationImproveSteps 10
+& 'D:\Miniconda3\envs\car\python.exe' -c "import ast, pathlib; p=pathlib.Path(r'reproduction_runs\TSPTW50_hard_CaR_POMO\summarize_evaluation.py'); ast.parse(p.read_text(encoding='utf-8')); print('Python parse: PASS')"
+& 'D:\Miniconda3\envs\car\python.exe' 'reproduction_runs\TSPTW50_hard_CaR_POMO\summarize_evaluation.py'
+```
+
+After each run, read-only checks verified the printed command and configuration, final metric lines, empty stderr, 313 progress rows ending at 10,000, all-valid GPU samples, matching before/after integrity snapshots, unchanged 20-step log hash, and no core source diff. Process-session polling only read the continuously growing stdout file; it did not invoke another evaluator.
+
+## Reproducible reruns after archival
+
+The absolute Python path below is a local-machine record. On another machine, pass its environment-specific interpreter with `-PythonExe`. The refinement runner writes to `reruns/<RunLabel>/` by default, performs all input and integrity preflight checks before creating that directory, and refuses to overwrite an existing path.
+
+Dry runs used to validate both formal configurations without launching `test.py`:
+
+```powershell
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1' -ValidationImproveSteps 5 -RunLabel 'dryrun_refinement_5' -PythonExe 'D:\Miniconda3\envs\car\python.exe' -DryRun
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1' -ValidationImproveSteps 10 -RunLabel 'dryrun_refinement_10' -PythonExe 'D:\Miniconda3\envs\car\python.exe' -DryRun
+```
+
+Future 5-step and 10-step reruns must use unique labels or a new explicit output directory:
+
+```powershell
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1' -ValidationImproveSteps 5 -RunLabel 'refinement_5_rerun_YYYYMMDD_HHMMSS' -PythonExe 'D:\Miniconda3\envs\car\python.exe'
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1' -ValidationImproveSteps 10 -RunLabel 'refinement_10_rerun_YYYYMMDD_HHMMSS' -PythonExe 'D:\Miniconda3\envs\car\python.exe'
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1' -ValidationImproveSteps 5 -RunLabel 'portable_refinement_5' -PythonExe '<path-to-python>' -OutputDir '<new-output-directory>'
+```
+
+The summarizer accepts explicit input and output locations. It prefers raw stdout/stderr when present and otherwise reads their sections from the committed combined logs. Generated summaries should go to a new output directory when the committed baseline must remain untouched.
+
+```powershell
+& 'D:\Miniconda3\envs\car\python.exe' 'reproduction_runs\TSPTW50_hard_CaR_POMO\summarize_evaluation.py' --input-dir 'reproduction_runs\TSPTW50_hard_CaR_POMO' --output-dir 'reproduction_runs\TSPTW50_hard_CaR_POMO\reruns\summary_YYYYMMDD_HHMMSS'
+```
+
+The 20-step wrapper uses the existing `run_smoke.ps1`. A rerun must supply a new `LogPrefix`; `full_evaluation` is the immutable committed baseline and must not be reused.
+
+```powershell
+& '.\reproduction_runs\TSPTW50_hard_CaR_POMO\run_smoke.ps1' -TestEpisodes 10000 -TestBatchSize 32 -ValidationImproveSteps 20 -LogPrefix 'full_evaluation_rerun_YYYYMMDD_HHMMSS'
+```
+
+Wrapper-only verification commands, which do not start model evaluation:
+
+```powershell
+$tokens=$null; $errors=$null; [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'reproduction_runs\TSPTW50_hard_CaR_POMO\run_refinement_evaluation.ps1'),[ref]$tokens,[ref]$errors) | Out-Null; if ($errors.Count -ne 0) { $errors | Format-List | Out-String | Write-Error } else { 'PowerShell parse: PASS' }
+& 'D:\Miniconda3\envs\car\python.exe' -c "import ast, pathlib; p=pathlib.Path(r'reproduction_runs\TSPTW50_hard_CaR_POMO\summarize_evaluation.py'); ast.parse(p.read_text(encoding='utf-8')); print('Python parse: PASS')"
 ```

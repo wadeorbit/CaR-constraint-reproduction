@@ -33,6 +33,72 @@
     "sampled_gpu_peak_delta_mib": 319,
     "gpu_sample_count": 25
   },
+  "refinement_5": {
+    "phase": "refinement_5",
+    "problem": "TSPTW",
+    "size": 50,
+    "hardness": "hard",
+    "checkpoint": "pretrained/TSPTW/CaR-POMO_50_hard/checkpoint.pt",
+    "seed": 2023,
+    "episodes": 10000,
+    "batch_size": 32,
+    "augmentation": 8,
+    "sample_size": 1,
+    "test_pomo_size": 1,
+    "validation_improve_steps": 5,
+    "construction_no_aug_score": 25.7445,
+    "construction_aug_score": 25.7108,
+    "construction_aug_gap_pct": 0.4779,
+    "construction_solution_infeasible_pct": 18.049,
+    "construction_instance_infeasible_pct": 9.65,
+    "improvement_no_aug_score": 25.632,
+    "improvement_aug_score": 25.6188,
+    "improvement_aug_gap_pct": 0.0335,
+    "improvement_solution_infeasible_pct": 0.166,
+    "improvement_instance_infeasible_pct": 0.02,
+    "evaluation_seconds": 222.48,
+    "wall_seconds": 247.666,
+    "sampled_gpu_peak_mib": 374,
+    "exit_code": 0,
+    "evaluation_seconds_per_instance": 0.022248,
+    "wall_seconds_per_instance": 0.0247666,
+    "gpu_baseline_mib": 55,
+    "sampled_gpu_peak_delta_mib": 319,
+    "gpu_sample_count": 442
+  },
+  "refinement_10": {
+    "phase": "refinement_10",
+    "problem": "TSPTW",
+    "size": 50,
+    "hardness": "hard",
+    "checkpoint": "pretrained/TSPTW/CaR-POMO_50_hard/checkpoint.pt",
+    "seed": 2023,
+    "episodes": 10000,
+    "batch_size": 32,
+    "augmentation": 8,
+    "sample_size": 1,
+    "test_pomo_size": 1,
+    "validation_improve_steps": 10,
+    "construction_no_aug_score": 25.7445,
+    "construction_aug_score": 25.7135,
+    "construction_aug_gap_pct": 0.4744,
+    "construction_solution_infeasible_pct": 18.035,
+    "construction_instance_infeasible_pct": 9.62,
+    "improvement_no_aug_score": 25.6244,
+    "improvement_aug_score": 25.6154,
+    "improvement_aug_gap_pct": 0.0195,
+    "improvement_solution_infeasible_pct": 0.076,
+    "improvement_instance_infeasible_pct": 0.01,
+    "evaluation_seconds": 329.83,
+    "wall_seconds": 337.866,
+    "sampled_gpu_peak_mib": 428,
+    "exit_code": 0,
+    "evaluation_seconds_per_instance": 0.032983,
+    "wall_seconds_per_instance": 0.0337866,
+    "gpu_baseline_mib": 55,
+    "sampled_gpu_peak_delta_mib": 373,
+    "gpu_sample_count": 613
+  },
   "full_evaluation": {
     "phase": "full_evaluation",
     "problem": "TSPTW",
@@ -66,37 +132,109 @@
     "sampled_gpu_peak_delta_mib": 319,
     "gpu_sample_count": 906
   },
-  "paper_reference": {
-    "objective": 25.614,
-    "gap_pct": 0.014,
-    "instance_infeasible_pct": 0.01,
-    "evaluation_seconds": 51.0
-  },
-  "comparisons": {
-    "objective": {
-      "signed_difference": 0.00019999999999953388,
-      "absolute_difference": 0.00019999999999953388,
-      "relative_error_pct": 0.0007808229874269301
+  "paper_reference_by_steps": {
+    "5": {
+      "objective": 25.619,
+      "gap_pct": 0.034,
+      "instance_infeasible_pct": 0.02,
+      "evaluation_seconds": 15.0
     },
-    "gap_pct": {
-      "signed_difference": 0.0011000000000000003,
-      "absolute_difference": 0.0011000000000000003,
-      "relative_error_pct": 7.8571428571428585
+    "10": {
+      "objective": 25.615,
+      "gap_pct": 0.02,
+      "instance_infeasible_pct": 0.01,
+      "evaluation_seconds": 27.0
     },
-    "instance_infeasible_pct": {
-      "signed_difference": -0.01,
-      "absolute_difference": 0.01,
-      "relative_error_pct": 100.0
-    },
-    "evaluation_seconds": {
-      "signed_difference": 440.02,
-      "absolute_difference": 440.02,
-      "relative_error_pct": 862.7843137254902
+    "20": {
+      "objective": 25.614,
+      "gap_pct": 0.014,
+      "instance_infeasible_pct": 0.01,
+      "evaluation_seconds": 51.0
     }
   },
-  "diagnostics": {
-    "local_solution_infeasible_pct": 0.061,
-    "solution_infeasible_comparable_to_paper_infsb": false,
-    "paper_infsb_aggregation": "instance-level best solution"
+  "comparisons_by_steps": {
+    "5": {
+      "objective": {
+        "signed_difference": -0.0002,
+        "absolute_difference": 0.0002,
+        "relative_error_pct": 0.000780670596
+      },
+      "gap_pct": {
+        "signed_difference": -0.0005,
+        "absolute_difference": 0.0005,
+        "relative_error_pct": 1.470588235294
+      },
+      "instance_infeasible_pct": {
+        "signed_difference": 0.0,
+        "absolute_difference": 0.0,
+        "relative_error_pct": 0.0
+      },
+      "evaluation_seconds": {
+        "signed_difference": 207.48,
+        "absolute_difference": 207.48,
+        "relative_error_pct": 1383.2
+      }
+    },
+    "10": {
+      "objective": {
+        "signed_difference": 0.0004,
+        "absolute_difference": 0.0004,
+        "relative_error_pct": 0.001561585009
+      },
+      "gap_pct": {
+        "signed_difference": -0.0005,
+        "absolute_difference": 0.0005,
+        "relative_error_pct": 2.5
+      },
+      "instance_infeasible_pct": {
+        "signed_difference": 0.0,
+        "absolute_difference": 0.0,
+        "relative_error_pct": 0.0
+      },
+      "evaluation_seconds": {
+        "signed_difference": 302.83,
+        "absolute_difference": 302.83,
+        "relative_error_pct": 1121.592592592592
+      }
+    },
+    "20": {
+      "objective": {
+        "signed_difference": 0.0002,
+        "absolute_difference": 0.0002,
+        "relative_error_pct": 0.000780822987
+      },
+      "gap_pct": {
+        "signed_difference": 0.0011,
+        "absolute_difference": 0.0011,
+        "relative_error_pct": 7.857142857143
+      },
+      "instance_infeasible_pct": {
+        "signed_difference": -0.01,
+        "absolute_difference": 0.01,
+        "relative_error_pct": 100.0
+      },
+      "evaluation_seconds": {
+        "signed_difference": 440.02,
+        "absolute_difference": 440.02,
+        "relative_error_pct": 862.78431372549
+      }
+    }
+  },
+  "diagnostics_by_steps": {
+    "5": {
+      "local_solution_infeasible_pct": 0.166,
+      "solution_infeasible_comparable_to_paper_infsb": false,
+      "paper_infsb_aggregation": "instance-level best solution"
+    },
+    "10": {
+      "local_solution_infeasible_pct": 0.076,
+      "solution_infeasible_comparable_to_paper_infsb": false,
+      "paper_infsb_aggregation": "instance-level best solution"
+    },
+    "20": {
+      "local_solution_infeasible_pct": 0.061,
+      "solution_infeasible_comparable_to_paper_infsb": false,
+      "paper_infsb_aggregation": "instance-level best solution"
+    }
   }
 }
