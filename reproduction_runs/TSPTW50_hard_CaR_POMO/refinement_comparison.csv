@@ -1,0 +1,4 @@
+validation_improve_steps,paper_objective,local_objective,objective_absolute_difference,objective_relative_error_pct,paper_gap_pct,local_gap_pct,gap_absolute_difference_pp,gap_relative_error_pct,paper_instance_infeasible_pct,local_instance_infeasible_pct,infeasible_absolute_difference_pp,infeasible_relative_error_pct,paper_time_seconds,local_evaluation_seconds,time_absolute_difference_seconds,time_relative_error_pct,local_wall_seconds,local_sampled_gpu_peak_mib,exit_code
+5,25.619,25.6188,0.0002,0.000780670596,0.034,0.0335,0.0005,1.470588235294,0.02,0.02,0.0,0.0,15.0,222.48,207.48,1383.2,247.666,374,0
+10,25.615,25.6154,0.0004,0.001561585009,0.02,0.0195,0.0005,2.5,0.01,0.01,0.0,0.0,27.0,329.83,302.83,1121.592592592592,337.866,428,0
+20,25.614,25.6142,0.0002,0.000780822987,0.014,0.0151,0.0011,7.857142857143,0.01,0.0,0.01,100.0,51.0,491.02,440.02,862.78431372549,498.447,331,0

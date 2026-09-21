@@ -101,3 +101,24 @@ The full run processed all 10,000 instances in 313 contiguous batches (312 batch
 The log's effective configuration is TSPTW size 50 Hard, official CaR-POMO checkpoint, 10,000 episodes, batch 32, 20 validation improvement steps, eightfold augmentation, `test_pomo_size=1`, `pomo_start=false`, `soft_constrained=true`, `eval_type=softmax`, `sample_size=1`, seed 2023, and GPU 0. The target dataset and checkpoint hashes were rechecked after the run and remained unchanged.
 
 The paper's Infsb metric is instance-level: it evaluates the best solution per original instance after construction and refinement. `Trainer.py` first takes `any` over the eight augmented streams for each original instance before computing this value. The solution-level percentage is retained as a useful diagnostic but is not used for the main paper comparison.
+
+## Five-step and ten-step formal evaluations (2026-09-21)
+
+At the start of this phase, current Git HEAD was `4fe4495c3ed8b49da89247e15d704e3eaefeda3e` (`Fix argparse percent sign in help text`, 2026-09-21T08:57:36+08:00). All tracked core source files were clean. The existing untracked Python bytecode and earlier smoke-training outputs were left untouched.
+
+The runner read the exact argument line from the successful 20-step log and refused to launch unless it matched the expected baseline. For each new run it constructed the same argument list and verified that the only changed token was `--validation_improve_steps`, set to 5 or 10. Both logs printed the expected effective values: TSPTW size 50 Hard, official checkpoint, 10,000 episodes, batch 32, `soft_constrained=True`, `pomo_start=False`, test POMO size 1, `softmax`, sample size 1, CUDA device 0. A full batch solution shape of `[256, 1, 50]` confirms 32 instances × 8 augmentations.
+
+| Steps | Improvement AUG | AUG Gap | Solution Infsb | Instance Infsb | Evaluator | Wall | GPU baseline/peak | GPU samples | Exit |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 5 | 25.6188 | 0.0335% | 0.166% | 0.020% | 222.48 s | 247.666 s | 55/374 MiB | 442/442 | 0 |
+| 10 | 25.6154 | 0.0195% | 0.076% | 0.010% | 329.83 s | 337.866 s | 55/428 MiB | 613/613 | 0 |
+
+Each run contained 313 contiguous progress rows and ended at 10,000/10,000. Both stderr files are zero bytes, and neither combined log contains Traceback, CUDA OOM, RuntimeError, AssertionError, or NaN.
+
+Before and after each run, SHA-256 snapshots covered the dataset, checkpoint, original 20-step log, `train.py`, `test.py`, `Trainer.py`, `utils.py`, every tracked `envs/*.py`, and every tracked `models/*.py`: 15/15 rows matched exactly in both runs. The persistent key hashes were:
+
+- dataset: `E8FB50D07692785D0E62A5F80BEBCD602C01051E81640718BAE783C395F33882`
+- checkpoint: `A85BE08B0CDC2C7EAE08DB838D4F295B7A3F493773293DB7163659F1AA5B4A80`
+- 20-step combined log: `752B1FBADBD3357C86AC392A8643414C1E942EC930773CFD4F584A88CA48B71B`
+
+No environment, dependency, dataset, checkpoint, or core algorithm source was modified. New and changed files are limited to reproduction runners, logs, integrity snapshots, parsed result tables, and documentation.

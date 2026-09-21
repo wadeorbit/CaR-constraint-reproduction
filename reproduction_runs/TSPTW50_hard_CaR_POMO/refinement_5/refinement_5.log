@@ -1,0 +1,1308 @@
+TSPTW50-hard CaR-POMO refinement_5
+Python executable: D:\Miniconda3\envs\car\python.exe
+Arguments: -u test.py --problem TSPTW --problem_size 50 --hardness hard --checkpoint pretrained/TSPTW/CaR-POMO_50_hard/checkpoint.pt --test_episodes 10000 --test_batch_size 32 --test_pomo_size 1 --improve_steps 5 --validation_improve_steps 5 --pomo_size 50 --pomo_start false --soft_constrained true --eval_type softmax --sample_size 1 --seed 2023 --gpu_id 0
+Started: 2026-09-21T13:54:10.3334015+08:00
+Finished: 2026-09-21T13:58:17.9996772+08:00
+Elapsed seconds: 247.666
+Exit code: 0
+GPU baseline MiB: 55
+GPU sampled peak MiB: 374
+----- STDOUT -----
+>> No occupation needed
+>> USE_CUDA: True, CUDA_DEVICE_NUM: 0
+>> Use unified encoder for Improvement and Construction!
+>> Use kopt decoder for Improvement!
+Number of Parameters: 1637856
+
+======================================================================
+                    TEST CONFIGURATION
+======================================================================
+  Problem:              TSPTW (Size: 50, Hardness: hard)
+  Checkpoint:           pretrained/TSPTW/CaR-POMO_50_hard/checkpoint.pt
+  Test Episodes:        10000 | Batch Size: 32
+  Validation Improve Steps: 5
+  Soft Constrained:     True
+  Improvement Method:   kopt | N2S Decoder: False
+  POMO Start:           False | Test POMO Size: 1
+  Unified Encoder:       True | Unified Decoder: False
+  Eval Type:            softmax
+  Sample Size:          1
+======================================================================
+
+>> TEST dataset tsptw50_hard.pkl
+>> TEST 10000 instances.
+>> validation eval type:  softmax
+Rank 0 >> val construction time:  0.9847865104675293
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.6141302585601807
+episode  32/10000, Elapsed[0.04m], Remain[12.73m]
+Rank 0 >> val construction time:  0.17929387092590332
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36203598976135254
+episode  64/10000, Elapsed[0.05m], Remain[8.54m]
+Rank 0 >> val construction time:  0.1280198097229004
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34552788734436035
+episode  96/10000, Elapsed[0.07m], Remain[6.91m]
+Rank 0 >> val construction time:  0.15343785285949707
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.41692233085632324
+episode 128/10000, Elapsed[0.08m], Remain[6.19m]
+Rank 0 >> val construction time:  0.15016436576843262
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3478882312774658
+episode 160/10000, Elapsed[0.09m], Remain[5.70m]
+Rank 0 >> val construction time:  0.13651585578918457
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36723899841308594
+episode 192/10000, Elapsed[0.11m], Remain[5.50m]
+Rank 0 >> val construction time:  0.12664508819580078
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3370828628540039
+episode 224/10000, Elapsed[0.12m], Remain[5.20m]
+Rank 0 >> val construction time:  0.09375882148742676
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31178927421569824
+episode 256/10000, Elapsed[0.13m], Remain[4.94m]
+Rank 0 >> val construction time:  0.0896151065826416
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31008338928222656
+episode 288/10000, Elapsed[0.14m], Remain[4.73m]
+Rank 0 >> val construction time:  0.0822134017944336
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36741042137145996
+episode 320/10000, Elapsed[0.15m], Remain[4.60m]
+Rank 0 >> val construction time:  0.09251713752746582
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3071126937866211
+episode 352/10000, Elapsed[0.16m], Remain[4.46m]
+Rank 0 >> val construction time:  0.09522509574890137
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33721446990966797
+episode 384/10000, Elapsed[0.17m], Remain[4.35m]
+Rank 0 >> val construction time:  0.09940767288208008
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.2989790439605713
+episode 416/10000, Elapsed[0.18m], Remain[4.25m]
+Rank 0 >> val construction time:  0.08800554275512695
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31152939796447754
+episode 448/10000, Elapsed[0.19m], Remain[4.15m]
+Rank 0 >> val construction time:  0.10383367538452148
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33441162109375
+episode 480/10000, Elapsed[0.21m], Remain[4.08m]
+Rank 0 >> val construction time:  0.10628199577331543
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.30616021156311035
+episode 512/10000, Elapsed[0.22m], Remain[4.02m]
+Rank 0 >> val construction time:  0.10536885261535645
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32934141159057617
+episode 544/10000, Elapsed[0.23m], Remain[3.96m]
+Rank 0 >> val construction time:  0.11965560913085938
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3579137325286865
+episode 576/10000, Elapsed[0.24m], Remain[3.93m]
+Rank 0 >> val construction time:  0.12755656242370605
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.38761448860168457
+episode 608/10000, Elapsed[0.25m], Remain[3.90m]
+Rank 0 >> val construction time:  0.11506104469299316
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3784029483795166
+episode 640/10000, Elapsed[0.26m], Remain[3.87m]
+Rank 0 >> val construction time:  0.13857579231262207
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34240007400512695
+episode 672/10000, Elapsed[0.28m], Remain[3.84m]
+Rank 0 >> val construction time:  0.11690068244934082
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.4433286190032959
+episode 704/10000, Elapsed[0.29m], Remain[3.82m]
+Rank 0 >> val construction time:  0.13080716133117676
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36631250381469727
+episode 736/10000, Elapsed[0.30m], Remain[3.80m]
+Rank 0 >> val construction time:  0.12235713005065918
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3120076656341553
+episode 768/10000, Elapsed[0.31m], Remain[3.77m]
+Rank 0 >> val construction time:  0.11213254928588867
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34685778617858887
+episode 800/10000, Elapsed[0.32m], Remain[3.73m]
+Rank 0 >> val construction time:  0.09964680671691895
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35764527320861816
+episode 832/10000, Elapsed[0.34m], Remain[3.72m]
+Rank 0 >> val construction time:  0.1482553482055664
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36606860160827637
+episode 864/10000, Elapsed[0.35m], Remain[3.71m]
+Rank 0 >> val construction time:  0.09789538383483887
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32671618461608887
+episode 896/10000, Elapsed[0.36m], Remain[3.68m]
+Rank 0 >> val construction time:  0.10541892051696777
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3175382614135742
+episode 928/10000, Elapsed[0.37m], Remain[3.65m]
+Rank 0 >> val construction time:  0.13463091850280762
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35786008834838867
+episode 960/10000, Elapsed[0.39m], Remain[3.63m]
+Rank 0 >> val construction time:  0.10677957534790039
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33379673957824707
+episode 992/10000, Elapsed[0.40m], Remain[3.60m]
+Rank 0 >> val construction time:  0.09735560417175293
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3211526870727539
+episode 1024/10000, Elapsed[0.41m], Remain[3.57m]
+Rank 0 >> val construction time:  0.10387158393859863
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34345030784606934
+episode 1056/10000, Elapsed[0.42m], Remain[3.54m]
+Rank 0 >> val construction time:  0.09808468818664551
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3278951644897461
+episode 1088/10000, Elapsed[0.43m], Remain[3.51m]
+Rank 0 >> val construction time:  0.08550786972045898
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3259925842285156
+episode 1120/10000, Elapsed[0.44m], Remain[3.48m]
+Rank 0 >> val construction time:  0.11051321029663086
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3280141353607178
+episode 1152/10000, Elapsed[0.45m], Remain[3.46m]
+Rank 0 >> val construction time:  0.15549373626708984
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33966970443725586
+episode 1184/10000, Elapsed[0.46m], Remain[3.44m]
+Rank 0 >> val construction time:  0.09718704223632812
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34040284156799316
+episode 1216/10000, Elapsed[0.47m], Remain[3.42m]
+Rank 0 >> val construction time:  0.1174464225769043
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3245198726654053
+episode 1248/10000, Elapsed[0.48m], Remain[3.40m]
+Rank 0 >> val construction time:  0.10783863067626953
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3401961326599121
+episode 1280/10000, Elapsed[0.50m], Remain[3.38m]
+Rank 0 >> val construction time:  0.11648726463317871
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3341803550720215
+episode 1312/10000, Elapsed[0.51m], Remain[3.36m]
+Rank 0 >> val construction time:  0.09415435791015625
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33563756942749023
+episode 1344/10000, Elapsed[0.52m], Remain[3.34m]
+Rank 0 >> val construction time:  0.09513354301452637
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34262514114379883
+episode 1376/10000, Elapsed[0.53m], Remain[3.32m]
+Rank 0 >> val construction time:  0.08424162864685059
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.30196070671081543
+episode 1408/10000, Elapsed[0.54m], Remain[3.29m]
+Rank 0 >> val construction time:  0.0875093936920166
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.29653072357177734
+episode 1440/10000, Elapsed[0.55m], Remain[3.27m]
+Rank 0 >> val construction time:  0.09251165390014648
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.30216169357299805
+episode 1472/10000, Elapsed[0.56m], Remain[3.25m]
+Rank 0 >> val construction time:  0.08389878273010254
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.29635190963745117
+episode 1504/10000, Elapsed[0.57m], Remain[3.22m]
+Rank 0 >> val construction time:  0.0937814712524414
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3002455234527588
+episode 1536/10000, Elapsed[0.58m], Remain[3.20m]
+Rank 0 >> val construction time:  0.11716485023498535
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3531653881072998
+episode 1568/10000, Elapsed[0.59m], Remain[3.19m]
+Rank 0 >> val construction time:  0.14010953903198242
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.442915678024292
+episode 1600/10000, Elapsed[0.61m], Remain[3.19m]
+Rank 0 >> val construction time:  0.16064763069152832
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.5648477077484131
+episode 1632/10000, Elapsed[0.62m], Remain[3.20m]
+Rank 0 >> val construction time:  0.14860892295837402
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35214972496032715
+episode 1664/10000, Elapsed[0.64m], Remain[3.19m]
+Rank 0 >> val construction time:  0.148512601852417
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.44754838943481445
+episode 1696/10000, Elapsed[0.65m], Remain[3.18m]
+Rank 0 >> val construction time:  0.14398789405822754
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36733078956604004
+episode 1728/10000, Elapsed[0.66m], Remain[3.18m]
+Rank 0 >> val construction time:  0.16643834114074707
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36968350410461426
+episode 1760/10000, Elapsed[0.68m], Remain[3.16m]
+Rank 0 >> val construction time:  0.10767245292663574
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3402543067932129
+episode 1792/10000, Elapsed[0.69m], Remain[3.15m]
+Rank 0 >> val construction time:  0.11359906196594238
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3594350814819336
+episode 1824/10000, Elapsed[0.70m], Remain[3.13m]
+Rank 0 >> val construction time:  0.1378920078277588
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3718142509460449
+episode 1856/10000, Elapsed[0.71m], Remain[3.12m]
+Rank 0 >> val construction time:  0.08753371238708496
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3380424976348877
+episode 1888/10000, Elapsed[0.72m], Remain[3.10m]
+Rank 0 >> val construction time:  0.14353275299072266
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.4715571403503418
+episode 1920/10000, Elapsed[0.74m], Remain[3.09m]
+Rank 0 >> val construction time:  0.15211701393127441
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3697011470794678
+episode 1952/10000, Elapsed[0.75m], Remain[3.09m]
+Rank 0 >> val construction time:  0.09050774574279785
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33789563179016113
+episode 1984/10000, Elapsed[0.76m], Remain[3.07m]
+Rank 0 >> val construction time:  0.1382310390472412
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36457180976867676
+episode 2016/10000, Elapsed[0.77m], Remain[3.05m]
+Rank 0 >> val construction time:  0.10474801063537598
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.40557074546813965
+episode 2048/10000, Elapsed[0.78m], Remain[3.04m]
+Rank 0 >> val construction time:  0.142439603805542
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3623161315917969
+episode 2080/10000, Elapsed[0.80m], Remain[3.03m]
+Rank 0 >> val construction time:  0.14254212379455566
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3605976104736328
+episode 2112/10000, Elapsed[0.81m], Remain[3.02m]
+Rank 0 >> val construction time:  0.1200704574584961
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.4392268657684326
+episode 2144/10000, Elapsed[0.82m], Remain[3.01m]
+Rank 0 >> val construction time:  0.16243267059326172
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3758726119995117
+episode 2176/10000, Elapsed[0.84m], Remain[3.00m]
+Rank 0 >> val construction time:  0.14524292945861816
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3378288745880127
+episode 2208/10000, Elapsed[0.85m], Remain[2.99m]
+Rank 0 >> val construction time:  0.18094563484191895
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3638455867767334
+episode 2240/10000, Elapsed[0.86m], Remain[2.98m]
+Rank 0 >> val construction time:  0.17827391624450684
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36104464530944824
+episode 2272/10000, Elapsed[0.87m], Remain[2.98m]
+Rank 0 >> val construction time:  0.11879849433898926
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31783580780029297
+episode 2304/10000, Elapsed[0.89m], Remain[2.96m]
+Rank 0 >> val construction time:  0.13544583320617676
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3550300598144531
+episode 2336/10000, Elapsed[0.90m], Remain[2.95m]
+Rank 0 >> val construction time:  0.11228132247924805
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.39379262924194336
+episode 2368/10000, Elapsed[0.91m], Remain[2.94m]
+Rank 0 >> val construction time:  0.14806365966796875
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.38039064407348633
+episode 2400/10000, Elapsed[0.92m], Remain[2.93m]
+Rank 0 >> val construction time:  0.15038156509399414
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.46113014221191406
+episode 2432/10000, Elapsed[0.94m], Remain[2.92m]
+Rank 0 >> val construction time:  0.0971231460571289
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3295934200286865
+episode 2464/10000, Elapsed[0.95m], Remain[2.90m]
+Rank 0 >> val construction time:  0.15032696723937988
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3688504695892334
+episode 2496/10000, Elapsed[0.96m], Remain[2.90m]
+Rank 0 >> val construction time:  0.1517329216003418
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3606688976287842
+episode 2528/10000, Elapsed[0.98m], Remain[2.88m]
+Rank 0 >> val construction time:  0.09742546081542969
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3693218231201172
+episode 2560/10000, Elapsed[0.99m], Remain[2.87m]
+Rank 0 >> val construction time:  0.12250447273254395
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.43568992614746094
+episode 2592/10000, Elapsed[1.00m], Remain[2.86m]
+Rank 0 >> val construction time:  0.15359878540039062
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.39502835273742676
+episode 2624/10000, Elapsed[1.01m], Remain[2.85m]
+Rank 0 >> val construction time:  0.09951400756835938
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.4525303840637207
+episode 2656/10000, Elapsed[1.03m], Remain[2.84m]
+Rank 0 >> val construction time:  0.15264391899108887
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.43003416061401367
+episode 2688/10000, Elapsed[1.04m], Remain[2.83m]
+Rank 0 >> val construction time:  0.15445351600646973
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3575301170349121
+episode 2720/10000, Elapsed[1.05m], Remain[2.82m]
+Rank 0 >> val construction time:  0.1334073543548584
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.5176131725311279
+episode 2752/10000, Elapsed[1.07m], Remain[2.81m]
+Rank 0 >> val construction time:  0.09467649459838867
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34174156188964844
+episode 2784/10000, Elapsed[1.08m], Remain[2.80m]
+Rank 0 >> val construction time:  0.1526491641998291
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34659337997436523
+episode 2816/10000, Elapsed[1.09m], Remain[2.78m]
+Rank 0 >> val construction time:  0.13852548599243164
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34710168838500977
+episode 2848/10000, Elapsed[1.10m], Remain[2.77m]
+Rank 0 >> val construction time:  0.15306544303894043
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3645341396331787
+episode 2880/10000, Elapsed[1.12m], Remain[2.76m]
+Rank 0 >> val construction time:  0.10351443290710449
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3560445308685303
+episode 2912/10000, Elapsed[1.13m], Remain[2.74m]
+Rank 0 >> val construction time:  0.14563846588134766
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3930363655090332
+episode 2944/10000, Elapsed[1.14m], Remain[2.73m]
+Rank 0 >> val construction time:  0.1631331443786621
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36999940872192383
+episode 2976/10000, Elapsed[1.15m], Remain[2.72m]
+Rank 0 >> val construction time:  0.10251426696777344
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36003732681274414
+episode 3008/10000, Elapsed[1.16m], Remain[2.71m]
+Rank 0 >> val construction time:  0.16507554054260254
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3435506820678711
+episode 3040/10000, Elapsed[1.18m], Remain[2.69m]
+Rank 0 >> val construction time:  0.10853075981140137
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3595237731933594
+episode 3072/10000, Elapsed[1.19m], Remain[2.68m]
+Rank 0 >> val construction time:  0.09252762794494629
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32077717781066895
+episode 3104/10000, Elapsed[1.20m], Remain[2.66m]
+Rank 0 >> val construction time:  0.12561678886413574
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36687707901000977
+episode 3136/10000, Elapsed[1.21m], Remain[2.65m]
+Rank 0 >> val construction time:  0.16502833366394043
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36157727241516113
+episode 3168/10000, Elapsed[1.22m], Remain[2.64m]
+Rank 0 >> val construction time:  0.16606545448303223
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36066436767578125
+episode 3200/10000, Elapsed[1.24m], Remain[2.63m]
+Rank 0 >> val construction time:  0.17270898818969727
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3510472774505615
+episode 3232/10000, Elapsed[1.25m], Remain[2.62m]
+Rank 0 >> val construction time:  0.12470507621765137
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3805420398712158
+episode 3264/10000, Elapsed[1.26m], Remain[2.60m]
+Rank 0 >> val construction time:  0.16694426536560059
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36311841011047363
+episode 3296/10000, Elapsed[1.27m], Remain[2.59m]
+Rank 0 >> val construction time:  0.11239218711853027
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34110212326049805
+episode 3328/10000, Elapsed[1.29m], Remain[2.58m]
+Rank 0 >> val construction time:  0.1712198257446289
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35511136054992676
+episode 3360/10000, Elapsed[1.30m], Remain[2.57m]
+Rank 0 >> val construction time:  0.15062832832336426
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.49251699447631836
+episode 3392/10000, Elapsed[1.31m], Remain[2.56m]
+Rank 0 >> val construction time:  0.17810988426208496
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36603403091430664
+episode 3424/10000, Elapsed[1.33m], Remain[2.55m]
+Rank 0 >> val construction time:  0.12523126602172852
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.41841983795166016
+episode 3456/10000, Elapsed[1.34m], Remain[2.54m]
+Rank 0 >> val construction time:  0.16252923011779785
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.37215399742126465
+episode 3488/10000, Elapsed[1.35m], Remain[2.52m]
+Rank 0 >> val construction time:  0.16294145584106445
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34985828399658203
+episode 3520/10000, Elapsed[1.36m], Remain[2.51m]
+Rank 0 >> val construction time:  0.1209716796875
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.41623950004577637
+episode 3552/10000, Elapsed[1.38m], Remain[2.50m]
+Rank 0 >> val construction time:  0.1682276725769043
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.357619047164917
+episode 3584/10000, Elapsed[1.39m], Remain[2.49m]
+Rank 0 >> val construction time:  0.14809012413024902
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.39504432678222656
+episode 3616/10000, Elapsed[1.40m], Remain[2.48m]
+Rank 0 >> val construction time:  0.1554858684539795
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34169483184814453
+episode 3648/10000, Elapsed[1.42m], Remain[2.46m]
+Rank 0 >> val construction time:  0.14353704452514648
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.353076696395874
+episode 3680/10000, Elapsed[1.43m], Remain[2.45m]
+Rank 0 >> val construction time:  0.15302658081054688
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35251617431640625
+episode 3712/10000, Elapsed[1.44m], Remain[2.44m]
+Rank 0 >> val construction time:  0.09570431709289551
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3430440425872803
+episode 3744/10000, Elapsed[1.45m], Remain[2.42m]
+Rank 0 >> val construction time:  0.11250948905944824
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33504772186279297
+episode 3776/10000, Elapsed[1.46m], Remain[2.41m]
+Rank 0 >> val construction time:  0.13253164291381836
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3428955078125
+episode 3808/10000, Elapsed[1.47m], Remain[2.40m]
+Rank 0 >> val construction time:  0.16843318939208984
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3600592613220215
+episode 3840/10000, Elapsed[1.49m], Remain[2.38m]
+Rank 0 >> val construction time:  0.11894392967224121
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34903383255004883
+episode 3872/10000, Elapsed[1.50m], Remain[2.37m]
+Rank 0 >> val construction time:  0.14658856391906738
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35573339462280273
+episode 3904/10000, Elapsed[1.51m], Remain[2.36m]
+Rank 0 >> val construction time:  0.1536571979522705
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35128259658813477
+episode 3936/10000, Elapsed[1.52m], Remain[2.34m]
+Rank 0 >> val construction time:  0.1555159091949463
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.366055965423584
+episode 3968/10000, Elapsed[1.53m], Remain[2.33m]
+Rank 0 >> val construction time:  0.1690669059753418
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3650538921356201
+episode 4000/10000, Elapsed[1.55m], Remain[2.32m]
+Rank 0 >> val construction time:  0.13551044464111328
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34604406356811523
+episode 4032/10000, Elapsed[1.56m], Remain[2.31m]
+Rank 0 >> val construction time:  0.15051770210266113
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3786907196044922
+episode 4064/10000, Elapsed[1.57m], Remain[2.30m]
+Rank 0 >> val construction time:  0.14482927322387695
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.39684438705444336
+episode 4096/10000, Elapsed[1.58m], Remain[2.28m]
+Rank 0 >> val construction time:  0.17611193656921387
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3662405014038086
+episode 4128/10000, Elapsed[1.60m], Remain[2.27m]
+Rank 0 >> val construction time:  0.11673879623413086
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33853602409362793
+episode 4160/10000, Elapsed[1.61m], Remain[2.26m]
+Rank 0 >> val construction time:  0.15802836418151855
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.42363572120666504
+episode 4192/10000, Elapsed[1.62m], Remain[2.25m]
+Rank 0 >> val construction time:  0.11862421035766602
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34253692626953125
+episode 4224/10000, Elapsed[1.63m], Remain[2.24m]
+Rank 0 >> val construction time:  0.14506793022155762
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3565804958343506
+episode 4256/10000, Elapsed[1.65m], Remain[2.22m]
+Rank 0 >> val construction time:  0.11052918434143066
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3409078121185303
+episode 4288/10000, Elapsed[1.66m], Remain[2.21m]
+Rank 0 >> val construction time:  0.14152956008911133
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3570420742034912
+episode 4320/10000, Elapsed[1.67m], Remain[2.20m]
+Rank 0 >> val construction time:  0.16206645965576172
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.46107935905456543
+episode 4352/10000, Elapsed[1.68m], Remain[2.19m]
+Rank 0 >> val construction time:  0.14952325820922852
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3900892734527588
+episode 4384/10000, Elapsed[1.70m], Remain[2.17m]
+Rank 0 >> val construction time:  0.15205144882202148
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.4280984401702881
+episode 4416/10000, Elapsed[1.71m], Remain[2.16m]
+Rank 0 >> val construction time:  0.16338086128234863
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3703880310058594
+episode 4448/10000, Elapsed[1.73m], Remain[2.16m]
+Rank 0 >> val construction time:  0.1535325050354004
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.4318690299987793
+episode 4480/10000, Elapsed[1.74m], Remain[2.14m]
+Rank 0 >> val construction time:  0.125349760055542
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.508368968963623
+episode 4512/10000, Elapsed[1.75m], Remain[2.13m]
+Rank 0 >> val construction time:  0.18600773811340332
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.37136411666870117
+episode 4544/10000, Elapsed[1.77m], Remain[2.12m]
+Rank 0 >> val construction time:  0.14856243133544922
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3839423656463623
+episode 4576/10000, Elapsed[1.78m], Remain[2.11m]
+Rank 0 >> val construction time:  0.15502429008483887
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3540933132171631
+episode 4608/10000, Elapsed[1.79m], Remain[2.10m]
+Rank 0 >> val construction time:  0.12283897399902344
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3829820156097412
+episode 4640/10000, Elapsed[1.81m], Remain[2.09m]
+Rank 0 >> val construction time:  0.136275053024292
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.395449161529541
+episode 4672/10000, Elapsed[1.82m], Remain[2.08m]
+Rank 0 >> val construction time:  0.14972686767578125
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3544299602508545
+episode 4704/10000, Elapsed[1.83m], Remain[2.06m]
+Rank 0 >> val construction time:  0.12952780723571777
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36196160316467285
+episode 4736/10000, Elapsed[1.85m], Remain[2.05m]
+Rank 0 >> val construction time:  0.17906951904296875
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3673117160797119
+episode 4768/10000, Elapsed[1.86m], Remain[2.04m]
+Rank 0 >> val construction time:  0.10553216934204102
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35497546195983887
+episode 4800/10000, Elapsed[1.87m], Remain[2.03m]
+Rank 0 >> val construction time:  0.11174941062927246
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3264954090118408
+episode 4832/10000, Elapsed[1.88m], Remain[2.01m]
+Rank 0 >> val construction time:  0.09073185920715332
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31031203269958496
+episode 4864/10000, Elapsed[1.89m], Remain[2.00m]
+Rank 0 >> val construction time:  0.1157081127166748
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34087681770324707
+episode 4896/10000, Elapsed[1.91m], Remain[1.99m]
+Rank 0 >> val construction time:  0.12095880508422852
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3609483242034912
+episode 4928/10000, Elapsed[1.92m], Remain[1.97m]
+Rank 0 >> val construction time:  0.10851168632507324
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3497626781463623
+episode 4960/10000, Elapsed[1.93m], Remain[1.96m]
+Rank 0 >> val construction time:  0.11161661148071289
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33545541763305664
+episode 4992/10000, Elapsed[1.94m], Remain[1.95m]
+Rank 0 >> val construction time:  0.13606691360473633
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3295280933380127
+episode 5024/10000, Elapsed[1.95m], Remain[1.93m]
+Rank 0 >> val construction time:  0.1340343952178955
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33361315727233887
+episode 5056/10000, Elapsed[1.96m], Remain[1.92m]
+Rank 0 >> val construction time:  0.10440969467163086
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.318342924118042
+episode 5088/10000, Elapsed[1.97m], Remain[1.91m]
+Rank 0 >> val construction time:  0.10503983497619629
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33657026290893555
+episode 5120/10000, Elapsed[1.99m], Remain[1.89m]
+Rank 0 >> val construction time:  0.10787177085876465
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32763242721557617
+episode 5152/10000, Elapsed[2.00m], Remain[1.88m]
+Rank 0 >> val construction time:  0.11343765258789062
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3560175895690918
+episode 5184/10000, Elapsed[2.01m], Remain[1.87m]
+Rank 0 >> val construction time:  0.10702037811279297
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3305327892303467
+episode 5216/10000, Elapsed[2.02m], Remain[1.85m]
+Rank 0 >> val construction time:  0.10851311683654785
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32476186752319336
+episode 5248/10000, Elapsed[2.03m], Remain[1.84m]
+Rank 0 >> val construction time:  0.10251283645629883
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3325345516204834
+episode 5280/10000, Elapsed[2.04m], Remain[1.82m]
+Rank 0 >> val construction time:  0.12608814239501953
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34870123863220215
+episode 5312/10000, Elapsed[2.05m], Remain[1.81m]
+Rank 0 >> val construction time:  0.10751533508300781
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3495309352874756
+episode 5344/10000, Elapsed[2.06m], Remain[1.80m]
+Rank 0 >> val construction time:  0.1080172061920166
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3480973243713379
+episode 5376/10000, Elapsed[2.07m], Remain[1.78m]
+Rank 0 >> val construction time:  0.11996221542358398
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34268856048583984
+episode 5408/10000, Elapsed[2.09m], Remain[1.77m]
+Rank 0 >> val construction time:  0.11523103713989258
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3435344696044922
+episode 5440/10000, Elapsed[2.10m], Remain[1.76m]
+Rank 0 >> val construction time:  0.11444401741027832
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3378629684448242
+episode 5472/10000, Elapsed[2.11m], Remain[1.74m]
+Rank 0 >> val construction time:  0.11251664161682129
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34104013442993164
+episode 5504/10000, Elapsed[2.12m], Remain[1.73m]
+Rank 0 >> val construction time:  0.15564203262329102
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33028101921081543
+episode 5536/10000, Elapsed[2.13m], Remain[1.72m]
+Rank 0 >> val construction time:  0.11751413345336914
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3600351810455322
+episode 5568/10000, Elapsed[2.14m], Remain[1.71m]
+Rank 0 >> val construction time:  0.1075892448425293
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3420448303222656
+episode 5600/10000, Elapsed[2.15m], Remain[1.69m]
+Rank 0 >> val construction time:  0.14551568031311035
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.334716796875
+episode 5632/10000, Elapsed[2.17m], Remain[1.68m]
+Rank 0 >> val construction time:  0.10151290893554688
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34853053092956543
+episode 5664/10000, Elapsed[2.18m], Remain[1.67m]
+Rank 0 >> val construction time:  0.10150814056396484
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.324068546295166
+episode 5696/10000, Elapsed[2.19m], Remain[1.65m]
+Rank 0 >> val construction time:  0.10051298141479492
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33403611183166504
+episode 5728/10000, Elapsed[2.20m], Remain[1.64m]
+Rank 0 >> val construction time:  0.1091604232788086
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3366680145263672
+episode 5760/10000, Elapsed[2.21m], Remain[1.63m]
+Rank 0 >> val construction time:  0.10851621627807617
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34879517555236816
+episode 5792/10000, Elapsed[2.22m], Remain[1.61m]
+Rank 0 >> val construction time:  0.09829068183898926
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34668421745300293
+episode 5824/10000, Elapsed[2.23m], Remain[1.60m]
+Rank 0 >> val construction time:  0.11355733871459961
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3244941234588623
+episode 5856/10000, Elapsed[2.24m], Remain[1.59m]
+Rank 0 >> val construction time:  0.10805058479309082
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3210327625274658
+episode 5888/10000, Elapsed[2.25m], Remain[1.57m]
+Rank 0 >> val construction time:  0.09768962860107422
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35004329681396484
+episode 5920/10000, Elapsed[2.26m], Remain[1.56m]
+Rank 0 >> val construction time:  0.11164689064025879
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.363344669342041
+episode 5952/10000, Elapsed[2.28m], Remain[1.55m]
+Rank 0 >> val construction time:  0.10849499702453613
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32933974266052246
+episode 5984/10000, Elapsed[2.29m], Remain[1.54m]
+Rank 0 >> val construction time:  0.14072751998901367
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36336612701416016
+episode 6016/10000, Elapsed[2.30m], Remain[1.52m]
+Rank 0 >> val construction time:  0.10428214073181152
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3332037925720215
+episode 6048/10000, Elapsed[2.31m], Remain[1.51m]
+Rank 0 >> val construction time:  0.11804413795471191
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33188295364379883
+episode 6080/10000, Elapsed[2.32m], Remain[1.50m]
+Rank 0 >> val construction time:  0.13722848892211914
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3194425106048584
+episode 6112/10000, Elapsed[2.33m], Remain[1.48m]
+Rank 0 >> val construction time:  0.14185595512390137
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3330667018890381
+episode 6144/10000, Elapsed[2.34m], Remain[1.47m]
+Rank 0 >> val construction time:  0.13690495491027832
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3626546859741211
+episode 6176/10000, Elapsed[2.36m], Remain[1.46m]
+Rank 0 >> val construction time:  0.09508061408996582
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3056299686431885
+episode 6208/10000, Elapsed[2.37m], Remain[1.45m]
+Rank 0 >> val construction time:  0.09905362129211426
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31276893615722656
+episode 6240/10000, Elapsed[2.38m], Remain[1.43m]
+Rank 0 >> val construction time:  0.13373374938964844
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3372056484222412
+episode 6272/10000, Elapsed[2.39m], Remain[1.42m]
+Rank 0 >> val construction time:  0.11891794204711914
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33103179931640625
+episode 6304/10000, Elapsed[2.40m], Remain[1.41m]
+Rank 0 >> val construction time:  0.1035163402557373
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3630406856536865
+episode 6336/10000, Elapsed[2.41m], Remain[1.40m]
+Rank 0 >> val construction time:  0.1125190258026123
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33852148056030273
+episode 6368/10000, Elapsed[2.42m], Remain[1.38m]
+Rank 0 >> val construction time:  0.10803794860839844
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.339982271194458
+episode 6400/10000, Elapsed[2.43m], Remain[1.37m]
+Rank 0 >> val construction time:  0.10947513580322266
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3162682056427002
+episode 6432/10000, Elapsed[2.45m], Remain[1.36m]
+Rank 0 >> val construction time:  0.10051441192626953
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3390367031097412
+episode 6464/10000, Elapsed[2.46m], Remain[1.34m]
+Rank 0 >> val construction time:  0.10851240158081055
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3177039623260498
+episode 6496/10000, Elapsed[2.47m], Remain[1.33m]
+Rank 0 >> val construction time:  0.12245559692382812
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3377823829650879
+episode 6528/10000, Elapsed[2.48m], Remain[1.32m]
+Rank 0 >> val construction time:  0.10312247276306152
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32903552055358887
+episode 6560/10000, Elapsed[2.49m], Remain[1.31m]
+Rank 0 >> val construction time:  0.12128877639770508
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3367328643798828
+episode 6592/10000, Elapsed[2.50m], Remain[1.29m]
+Rank 0 >> val construction time:  0.14472603797912598
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3832066059112549
+episode 6624/10000, Elapsed[2.51m], Remain[1.28m]
+Rank 0 >> val construction time:  0.1131894588470459
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3235485553741455
+episode 6656/10000, Elapsed[2.52m], Remain[1.27m]
+Rank 0 >> val construction time:  0.1205143928527832
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3399162292480469
+episode 6688/10000, Elapsed[2.54m], Remain[1.26m]
+Rank 0 >> val construction time:  0.13434171676635742
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3215007781982422
+episode 6720/10000, Elapsed[2.55m], Remain[1.24m]
+Rank 0 >> val construction time:  0.1426706314086914
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3565797805786133
+episode 6752/10000, Elapsed[2.56m], Remain[1.23m]
+Rank 0 >> val construction time:  0.11135387420654297
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34271883964538574
+episode 6784/10000, Elapsed[2.57m], Remain[1.22m]
+Rank 0 >> val construction time:  0.09975719451904297
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33029651641845703
+episode 6816/10000, Elapsed[2.58m], Remain[1.21m]
+Rank 0 >> val construction time:  0.10573911666870117
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.329272985458374
+episode 6848/10000, Elapsed[2.59m], Remain[1.19m]
+Rank 0 >> val construction time:  0.10051465034484863
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33206796646118164
+episode 6880/10000, Elapsed[2.60m], Remain[1.18m]
+Rank 0 >> val construction time:  0.10151267051696777
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34955763816833496
+episode 6912/10000, Elapsed[2.61m], Remain[1.17m]
+Rank 0 >> val construction time:  0.09650897979736328
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.337357759475708
+episode 6944/10000, Elapsed[2.62m], Remain[1.16m]
+Rank 0 >> val construction time:  0.1025083065032959
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35053086280822754
+episode 6976/10000, Elapsed[2.64m], Remain[1.14m]
+Rank 0 >> val construction time:  0.10251545906066895
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33153367042541504
+episode 7008/10000, Elapsed[2.65m], Remain[1.13m]
+Rank 0 >> val construction time:  0.10507440567016602
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3283669948577881
+episode 7040/10000, Elapsed[2.66m], Remain[1.12m]
+Rank 0 >> val construction time:  0.09847259521484375
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3290858268737793
+episode 7072/10000, Elapsed[2.67m], Remain[1.10m]
+Rank 0 >> val construction time:  0.10751676559448242
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33252954483032227
+episode 7104/10000, Elapsed[2.68m], Remain[1.09m]
+Rank 0 >> val construction time:  0.13751459121704102
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3365333080291748
+episode 7136/10000, Elapsed[2.69m], Remain[1.08m]
+Rank 0 >> val construction time:  0.10756397247314453
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33152246475219727
+episode 7168/10000, Elapsed[2.70m], Remain[1.07m]
+Rank 0 >> val construction time:  0.11145997047424316
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3311805725097656
+episode 7200/10000, Elapsed[2.71m], Remain[1.05m]
+Rank 0 >> val construction time:  0.11023283004760742
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3520171642303467
+episode 7232/10000, Elapsed[2.72m], Remain[1.04m]
+Rank 0 >> val construction time:  0.11951327323913574
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32853055000305176
+episode 7264/10000, Elapsed[2.74m], Remain[1.03m]
+Rank 0 >> val construction time:  0.16189026832580566
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.38004589080810547
+episode 7296/10000, Elapsed[2.75m], Remain[1.02m]
+Rank 0 >> val construction time:  0.11551094055175781
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.322551965713501
+episode 7328/10000, Elapsed[2.76m], Remain[1.01m]
+Rank 0 >> val construction time:  0.11858963966369629
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.352536678314209
+episode 7360/10000, Elapsed[2.77m], Remain[0.99m]
+Rank 0 >> val construction time:  0.14902687072753906
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3625361919403076
+episode 7392/10000, Elapsed[2.78m], Remain[0.98m]
+Rank 0 >> val construction time:  0.1510167121887207
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3660464286804199
+episode 7424/10000, Elapsed[2.79m], Remain[0.97m]
+Rank 0 >> val construction time:  0.10650944709777832
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34995102882385254
+episode 7456/10000, Elapsed[2.81m], Remain[0.96m]
+Rank 0 >> val construction time:  0.11090278625488281
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3271486759185791
+episode 7488/10000, Elapsed[2.82m], Remain[0.95m]
+Rank 0 >> val construction time:  0.1000220775604248
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3397080898284912
+episode 7520/10000, Elapsed[2.83m], Remain[0.93m]
+Rank 0 >> val construction time:  0.10551118850708008
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3325357437133789
+episode 7552/10000, Elapsed[2.84m], Remain[0.92m]
+Rank 0 >> val construction time:  0.11105704307556152
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3515284061431885
+episode 7584/10000, Elapsed[2.85m], Remain[0.91m]
+Rank 0 >> val construction time:  0.10821700096130371
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3305370807647705
+episode 7616/10000, Elapsed[2.86m], Remain[0.90m]
+Rank 0 >> val construction time:  0.11854863166809082
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33753371238708496
+episode 7648/10000, Elapsed[2.87m], Remain[0.88m]
+Rank 0 >> val construction time:  0.1327347755432129
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32978200912475586
+episode 7680/10000, Elapsed[2.88m], Remain[0.87m]
+Rank 0 >> val construction time:  0.0927438735961914
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32563328742980957
+episode 7712/10000, Elapsed[2.89m], Remain[0.86m]
+Rank 0 >> val construction time:  0.12190580368041992
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34310269355773926
+episode 7744/10000, Elapsed[2.91m], Remain[0.85m]
+Rank 0 >> val construction time:  0.12714552879333496
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35851168632507324
+episode 7776/10000, Elapsed[2.92m], Remain[0.83m]
+Rank 0 >> val construction time:  0.12050557136535645
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35892248153686523
+episode 7808/10000, Elapsed[2.93m], Remain[0.82m]
+Rank 0 >> val construction time:  0.14751601219177246
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34319519996643066
+episode 7840/10000, Elapsed[2.94m], Remain[0.81m]
+Rank 0 >> val construction time:  0.10760092735290527
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32514262199401855
+episode 7872/10000, Elapsed[2.95m], Remain[0.80m]
+Rank 0 >> val construction time:  0.12102532386779785
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3370034694671631
+episode 7904/10000, Elapsed[2.96m], Remain[0.79m]
+Rank 0 >> val construction time:  0.1330275535583496
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35327696800231934
+episode 7936/10000, Elapsed[2.98m], Remain[0.77m]
+Rank 0 >> val construction time:  0.11951041221618652
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33985257148742676
+episode 7968/10000, Elapsed[2.99m], Remain[0.76m]
+Rank 0 >> val construction time:  0.11945128440856934
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34490299224853516
+episode 8000/10000, Elapsed[3.00m], Remain[0.75m]
+Rank 0 >> val construction time:  0.1092219352722168
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3420407772064209
+episode 8032/10000, Elapsed[3.01m], Remain[0.74m]
+Rank 0 >> val construction time:  0.11378002166748047
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3554568290710449
+episode 8064/10000, Elapsed[3.02m], Remain[0.73m]
+Rank 0 >> val construction time:  0.1057426929473877
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34688711166381836
+episode 8096/10000, Elapsed[3.03m], Remain[0.71m]
+Rank 0 >> val construction time:  0.09698891639709473
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3350546360015869
+episode 8128/10000, Elapsed[3.04m], Remain[0.70m]
+Rank 0 >> val construction time:  0.10677409172058105
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33937954902648926
+episode 8160/10000, Elapsed[3.05m], Remain[0.69m]
+Rank 0 >> val construction time:  0.11151981353759766
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33326292037963867
+episode 8192/10000, Elapsed[3.07m], Remain[0.68m]
+Rank 0 >> val construction time:  0.11582255363464355
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35287952423095703
+episode 8224/10000, Elapsed[3.08m], Remain[0.66m]
+Rank 0 >> val construction time:  0.10567736625671387
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3370931148529053
+episode 8256/10000, Elapsed[3.09m], Remain[0.65m]
+Rank 0 >> val construction time:  0.0995168685913086
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3370387554168701
+episode 8288/10000, Elapsed[3.10m], Remain[0.64m]
+Rank 0 >> val construction time:  0.08351922035217285
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3225102424621582
+episode 8320/10000, Elapsed[3.11m], Remain[0.63m]
+Rank 0 >> val construction time:  0.09551596641540527
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34052467346191406
+episode 8352/10000, Elapsed[3.12m], Remain[0.62m]
+Rank 0 >> val construction time:  0.10451340675354004
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3479914665222168
+episode 8384/10000, Elapsed[3.13m], Remain[0.60m]
+Rank 0 >> val construction time:  0.1475231647491455
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34384727478027344
+episode 8416/10000, Elapsed[3.14m], Remain[0.59m]
+Rank 0 >> val construction time:  0.14190435409545898
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34772562980651855
+episode 8448/10000, Elapsed[3.16m], Remain[0.58m]
+Rank 0 >> val construction time:  0.10251021385192871
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3255312442779541
+episode 8480/10000, Elapsed[3.17m], Remain[0.57m]
+Rank 0 >> val construction time:  0.12251114845275879
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34003114700317383
+episode 8512/10000, Elapsed[3.18m], Remain[0.56m]
+Rank 0 >> val construction time:  0.10929751396179199
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.339644193649292
+episode 8544/10000, Elapsed[3.19m], Remain[0.54m]
+Rank 0 >> val construction time:  0.1303856372833252
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33776259422302246
+episode 8576/10000, Elapsed[3.20m], Remain[0.53m]
+Rank 0 >> val construction time:  0.10692143440246582
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35720300674438477
+episode 8608/10000, Elapsed[3.21m], Remain[0.52m]
+Rank 0 >> val construction time:  0.12441825866699219
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3489222526550293
+episode 8640/10000, Elapsed[3.22m], Remain[0.51m]
+Rank 0 >> val construction time:  0.12901759147644043
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31734371185302734
+episode 8672/10000, Elapsed[3.24m], Remain[0.50m]
+Rank 0 >> val construction time:  0.12651872634887695
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3176703453063965
+episode 8704/10000, Elapsed[3.25m], Remain[0.48m]
+Rank 0 >> val construction time:  0.10851001739501953
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3285398483276367
+episode 8736/10000, Elapsed[3.26m], Remain[0.47m]
+Rank 0 >> val construction time:  0.08453249931335449
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32142066955566406
+episode 8768/10000, Elapsed[3.27m], Remain[0.46m]
+Rank 0 >> val construction time:  0.1011037826538086
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.344012975692749
+episode 8800/10000, Elapsed[3.28m], Remain[0.45m]
+Rank 0 >> val construction time:  0.1045539379119873
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3342556953430176
+episode 8832/10000, Elapsed[3.29m], Remain[0.44m]
+Rank 0 >> val construction time:  0.10705995559692383
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3390367031097412
+episode 8864/10000, Elapsed[3.30m], Remain[0.42m]
+Rank 0 >> val construction time:  0.11123418807983398
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35103869438171387
+episode 8896/10000, Elapsed[3.31m], Remain[0.41m]
+Rank 0 >> val construction time:  0.10051226615905762
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3325319290161133
+episode 8928/10000, Elapsed[3.33m], Remain[0.40m]
+Rank 0 >> val construction time:  0.1075141429901123
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34003520011901855
+episode 8960/10000, Elapsed[3.34m], Remain[0.39m]
+Rank 0 >> val construction time:  0.09751009941101074
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34653162956237793
+episode 8992/10000, Elapsed[3.35m], Remain[0.38m]
+Rank 0 >> val construction time:  0.10735821723937988
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3495321273803711
+episode 9024/10000, Elapsed[3.36m], Remain[0.36m]
+Rank 0 >> val construction time:  0.12051725387573242
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35452747344970703
+episode 9056/10000, Elapsed[3.37m], Remain[0.35m]
+Rank 0 >> val construction time:  0.13303232192993164
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33452892303466797
+episode 9088/10000, Elapsed[3.38m], Remain[0.34m]
+Rank 0 >> val construction time:  0.12451744079589844
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.31157445907592773
+episode 9120/10000, Elapsed[3.39m], Remain[0.33m]
+Rank 0 >> val construction time:  0.11704778671264648
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36104583740234375
+episode 9152/10000, Elapsed[3.40m], Remain[0.32m]
+Rank 0 >> val construction time:  0.14351272583007812
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.36304545402526855
+episode 9184/10000, Elapsed[3.42m], Remain[0.30m]
+Rank 0 >> val construction time:  0.09750819206237793
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34552884101867676
+episode 9216/10000, Elapsed[3.43m], Remain[0.29m]
+Rank 0 >> val construction time:  0.11202096939086914
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3361806869506836
+episode 9248/10000, Elapsed[3.44m], Remain[0.28m]
+Rank 0 >> val construction time:  0.11451268196105957
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.32273149490356445
+episode 9280/10000, Elapsed[3.45m], Remain[0.27m]
+Rank 0 >> val construction time:  0.1075141429901123
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33252787590026855
+episode 9312/10000, Elapsed[3.46m], Remain[0.26m]
+Rank 0 >> val construction time:  0.11652731895446777
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.35452699661254883
+episode 9344/10000, Elapsed[3.47m], Remain[0.24m]
+Rank 0 >> val construction time:  0.10486054420471191
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3248302936553955
+episode 9376/10000, Elapsed[3.48m], Remain[0.23m]
+Rank 0 >> val construction time:  0.13351845741271973
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3258018493652344
+episode 9408/10000, Elapsed[3.49m], Remain[0.22m]
+Rank 0 >> val construction time:  0.12657785415649414
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3605375289916992
+episode 9440/10000, Elapsed[3.51m], Remain[0.21m]
+Rank 0 >> val construction time:  0.12111306190490723
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3385286331176758
+episode 9472/10000, Elapsed[3.52m], Remain[0.20m]
+Rank 0 >> val construction time:  0.1155240535736084
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3415224552154541
+episode 9504/10000, Elapsed[3.53m], Remain[0.18m]
+Rank 0 >> val construction time:  0.12251114845275879
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3255274295806885
+episode 9536/10000, Elapsed[3.54m], Remain[0.17m]
+Rank 0 >> val construction time:  0.09931135177612305
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33953022956848145
+episode 9568/10000, Elapsed[3.55m], Remain[0.16m]
+Rank 0 >> val construction time:  0.1318974494934082
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3325340747833252
+episode 9600/10000, Elapsed[3.56m], Remain[0.15m]
+Rank 0 >> val construction time:  0.1750349998474121
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3620479106903076
+episode 9632/10000, Elapsed[3.57m], Remain[0.14m]
+Rank 0 >> val construction time:  0.11502480506896973
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3425295352935791
+episode 9664/10000, Elapsed[3.59m], Remain[0.12m]
+Rank 0 >> val construction time:  0.11002254486083984
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3405444622039795
+episode 9696/10000, Elapsed[3.60m], Remain[0.11m]
+Rank 0 >> val construction time:  0.16002798080444336
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3565692901611328
+episode 9728/10000, Elapsed[3.61m], Remain[0.10m]
+Rank 0 >> val construction time:  0.09882068634033203
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3243083953857422
+episode 9760/10000, Elapsed[3.62m], Remain[0.09m]
+Rank 0 >> val construction time:  0.14475536346435547
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33820009231567383
+episode 9792/10000, Elapsed[3.63m], Remain[0.08m]
+Rank 0 >> val construction time:  0.11751174926757812
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3465385437011719
+episode 9824/10000, Elapsed[3.64m], Remain[0.07m]
+Rank 0 >> val construction time:  0.11524701118469238
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.34069085121154785
+episode 9856/10000, Elapsed[3.65m], Remain[0.05m]
+Rank 0 >> val construction time:  0.10449838638305664
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3195314407348633
+episode 9888/10000, Elapsed[3.67m], Remain[0.04m]
+Rank 0 >> val construction time:  0.10451650619506836
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3385305404663086
+episode 9920/10000, Elapsed[3.68m], Remain[0.03m]
+Rank 0 >> val construction time:  0.11301922798156738
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.33752965927124023
+episode 9952/10000, Elapsed[3.69m], Remain[0.02m]
+Rank 0 >> val construction time:  0.09851813316345215
+! solution size:  torch.Size([256, 1, 50])
+Rank 0 >> val improvement time:  0.3206005096435547
+episode 9984/10000, Elapsed[3.70m], Remain[0.01m]
+Rank 0 >> val construction time:  0.09527587890625
+! solution size:  torch.Size([128, 1, 50])
+Rank 0 >> val improvement time:  0.27763962745666504
+episode 10000/10000, Elapsed[3.71m], Remain[0.00m]
+>> Only feasible solutions are under consideration!
+>> Load optimal solution from: ./data\TSPTW\lkh_tsptw50_hard.pkl
+Rank 0 >> Val Score on tsptw50_hard.pkl: [Construction] NO_AUG_Score: 25.7445, NO_AUG_Gap: 0.6168% --> AUG_Score: 25.7108, AUG_Gap: 0.4779%; Infeasible rate: 18.049% (solution-level), 9.65% (instance-level)
+Rank 0 >> Val Score on tsptw50_hard.pkl: [Improvement] NO_AUG_Score: 25.632, NO_AUG_Gap: 0.076% --> AUG_Score: 25.6188, AUG_Gap: 0.0335%; Infeasible rate: 0.166% (solution-level), 0.02% (instance-level)
+>> Evaluation finished within 222.48s
+
+
+*** Test Done on TSPTW ***
+
+*** Construction ***
+ NO-AUG SCORE: 25.7445, Gap: 0.6168
+ AUGMENTATION SCORE: 25.7108, Gap: 0.4779
+Solution level Infeasible rate: 18.049%
+Instance level Infeasible rate: 9.650%
+
+*** Improvement ***
+ NO-AUG SCORE: 25.632, Gap: 0.0760
+ AUGMENTATION SCORE: 25.6188, Gap: 0.0335
+NO AUG Solution level Infeasible rate: 0.210%
+Solution level Infeasible rate: 0.166%
+Instance level Infeasible rate: 0.020%
+----- STDERR -----
